@@ -30,21 +30,21 @@ class StudentManager:
        self.students.append(student)
        self.save_students()
 
-  def show_menu():
+def show_menu():
      print("\n--- Student Management System ---")
      print("1. Add Student")
      print("2. View Students")
      print("3. Exit")
   
 
-  def view_students(self):
+def view_students(self):
     return self.students
     
     
-manager = StudentManager():
+manager = StudentManager()
 while True:
-  show_menu():
-  choice = input("Enter choice")
+  show_menu()
+  choice = input("Enter choice: ")
   
   if choice == "1":
     student_id = input("ID: ")
@@ -70,6 +70,7 @@ while True:
         print("Invalid choice!")
          
   
+
 
 
 

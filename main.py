@@ -29,9 +29,49 @@ class StudentManager:
   def add_student(self , student):
        self.students.append(student)
        self.save_students()
-         
+
+  def show_menu():
+     print("\n--- Student Management System ---")
+     print("1. Add Student")
+     print("2. View Students")
+     print("3. Exit")
+  
+
+  def view_students(self):
+    return self.students
+    
+    
+manager = StudentManager():
+while True:
+  show_menu():
+  choice = input("Enter choice")
+  
+  if choice == "1":
+    student_id = input("ID: ")
+    name = input("Name: ")
+    age = input("Age: ")
+    course = input("Course: ")
+    
+    student = Student(student_id,name,age,course)
+    manager.add_student(student)
+    print("Student added successfully!")
+
+
+  elif choice == "2":
+    students = manager.view_student()
+    for s in students:
+            print(f"{s.student_id} | {s.name} | {s.age} | {s.course}")
+  
+  elif choice == "3":
+        print("Exiting program.")
+        break
+
+  else:
+        print("Invalid choice!")
          
   
+
+
 
 
 

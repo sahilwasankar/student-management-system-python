@@ -37,11 +37,22 @@ class StudentManager:
         if not self.students:
             print("No students found.")
             return
-
         for student in self.students:
             print(
                 student.student_id,
                 student.name,
                 student.age,
                 student.course
-            )
+            ) 
+
+            
+    def delete_student(self,student_id):
+        for student in self.students:
+            if(student.student_id == student_id):
+                self.students.remove(student)
+                self.save_students()
+                print("Student deleted successfully")
+                return
+        print("Student ID not found.")
+
+        

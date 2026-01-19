@@ -29,9 +29,20 @@ class StudentManager:
             for student in self.students:
                 writer.writerow(student.to_csv_row())
 
+    def student_exists(self,student_id):
+        for student in self.students:
+            if student.student_id == student_id:
+                return True
+        return False 
+    
     def add_student(self, student):
+        if self.student_exists(student.student_id):
+            print("Student ID already exists. Use a unique ID.")
+            return
+            
         self.students.append(student)
         self.save_students()
+        print("Student added successfully.")
 
     def view_students(self):
         if not self.students:
@@ -45,7 +56,7 @@ class StudentManager:
                 student.course
             ) 
 
-            
+
     def delete_student(self,student_id):
         for student in self.students:
             if(student.student_id == student_id):

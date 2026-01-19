@@ -26,7 +26,7 @@ while True:
 
         student = Student(sid, name, age, course)
         manager.add_student(student)
-        print("Student added!")
+        
 
     elif choice == "2":
         manager.view_students()

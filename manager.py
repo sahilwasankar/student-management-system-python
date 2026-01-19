@@ -39,7 +39,7 @@ class StudentManager:
         if self.student_exists(student.student_id):
             print("Student ID already exists. Use a unique ID.")
             return
-            
+        
         self.students.append(student)
         self.save_students()
         print("Student added successfully.")
@@ -50,10 +50,7 @@ class StudentManager:
             return
         for student in self.students:
             print(
-                student.student_id,
-                student.name,
-                student.age,
-                student.course
+              f" ID: {student.student_id}, Name: {student.name}, Age: { student.age}, Course: {student.course}"
             ) 
 
 

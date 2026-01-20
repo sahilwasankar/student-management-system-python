@@ -1,3 +1,5 @@
+🚀 Version: v1.0 (Stable)
+
 # Student Management System (Python)
 Console-based Student Management System built in Python using OOP and file handling (CSV/TXT) to perform CRUD operations with persistent storage.
 ### 🔚 Status

@@ -1,3 +1,4 @@
+import os
 import csv
 from student import Student
 
@@ -6,6 +7,13 @@ class StudentManager:
     def __init__(self, filename="data/students.csv"):
         self.filename = filename
         self.students = []
+
+        # Auto create file if missing
+        if not os.path.exists(self.filename):
+            with open(self.filename,"w", newline="") as file:  
+                pass
+            
+            
         self.load_students()
 
     def load_students(self):

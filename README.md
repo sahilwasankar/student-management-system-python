@@ -17,6 +17,25 @@ Project structure completed and ready for local Git workflow.
 - Delete student
 - Persistent storage using CSV file
 
+
+
+What’s New in v2.0 :
+
+Added a confirmation step before deleting a student to avoid accidental data loss
+Implemented validation to ensure student IDs are unique during the add operation
+Introduced automatic creation of the student data file if it is missing
+
+Improved User Experience :
+
+Improved menu layout for better readability
+Displayed student details in a clear and consistent format
+Added safety prompts for actions that modify or delete data
+
+File Safety & Reliability :
+
+Automatically creates the required data folder and CSV file if they do not exist
+Prevents program crashes caused by missing or deleted data files
+
 ---
 
 ## Project Structure

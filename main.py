@@ -17,20 +17,53 @@ def show_menu():
 
 manager = StudentManager()
 
+def get_valid_student_data():
+
+    while True:
+     try:
+       sid =  input("ID: ").strip()
+       break
+       
+     except ValueError:
+        print("Input the valid integer only!")    
+
+    while True:
+        name = input("Name: ").strip()
+        if name :
+            break
+        print("The name input should not be empty")
+                     
+    while True:
+     try :
+         age = int(input("Age: "))
+         if age > 0:             
+            break
+         print("Age must be positive")
+
+     except ValueError:
+         print("Age must be a number")
+
+
+    while True:
+        course = input("Course: ")
+        if course:
+            break
+        print("Course should not be empty")
+
+
+    return sid,name,age,course
+
+
+
 while True:
     show_menu()
     choice = input("Enter choice: ")
 
     if choice == "1":
-        sid = input("ID: ")
-        name = input("Name: ")
-        age = input("Age: ")
-        course = input("Course: ")
-
+        sid, name, age, course = get_valid_student_data()
         student = Student(sid, name, age, course)
-        manager.add_student(student)
+        manager.add_student(student) 
         
-
     elif choice == "2":
         manager.view_students()
 
@@ -49,3 +82,14 @@ while True:
 
     else:
         print("Invalid choice")
+
+
+
+    
+
+
+
+    
+    
+
+

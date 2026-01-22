@@ -2,9 +2,10 @@
 
 
 # Student Management System (Python)
-Console-based Student Management System built in Python using OOP and file handling (CSV/TXT) to perform CRUD operations with persistent storage.
+Console-based Student Management System built in Python using OOP and CSV file handling.
+
 ### 🔚 Status
-Project structure completed and ready for local Git workflow.
+Project v2.0 completed with improved validation, user experience, and edge-case handling.
 
 
 ---
@@ -18,7 +19,7 @@ Project structure completed and ready for local Git workflow.
 - Delete student
 - Persistent storage using CSV file
 
-
+---
 
 What’s New in v2.0 :
 
@@ -78,6 +79,24 @@ python main.py
 - File handling using CSV
 - Modular coding practices
 - Using Git for version control
+
+---
+---
+
+## Project Evolution
+
+**v1.0**
+- Basic CRUD operations
+- CSV-based persistence
+- Menu-driven console application
+
+**v2.0**
+- Strong input validation
+- Duplicate student ID prevention
+- Safe handling of empty files
+- Improved user experience
+- Tested for edge cases without crashes
+
 
 ---
 
